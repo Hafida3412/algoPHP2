@@ -52,5 +52,5 @@ function afficherTableHTML($Noms) {
         echo '<br>';
     }
 }
-
+    
 afficherTableHTML($Noms);
