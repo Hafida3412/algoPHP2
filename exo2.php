@@ -11,10 +11,12 @@ Vous devrez appeler la fonction comme suit:
     /*afficherTableHTML($capitales);*/
 
 <table>
+    <thead>
     <tr>
         <th>Pays</th>
         <th>Capitales</th>
     </tr>
+</thead>
     <tr>
         <td>ALLEMAGNE</td>
         <td>Berlin</td>
@@ -37,6 +39,7 @@ Vous devrez appeler la fonction comme suit:
 
 <?php
 
+
 $Noms= [
     "ALLEMAGNE"=> "Berlin",
     "FRANCE"=> "Paris",
@@ -44,13 +47,29 @@ $Noms= [
     "USA"=>"Washington"
 ];
 
+
 ksort($Noms);
+
 function afficherTableHTML($Noms) {
     echo '<br>';
+    echo "<table> 
+    <thead>
+    <tr>
+        <th>Pays</th>
+        <th>Capitales</th>
+    </tr>
+</thead>";
     foreach($Noms as $Pays => $capitales){
-        echo mb_strtoupper($Pays) . ucfirst($capitales);
-        echo '<br>';
+        echo "
+    <tr>
+    <td>".mb_strtoupper($Pays)."</td>
+    <td>".ucfirst($capitales)."<td>
+    </tr>";
     }
+
+    echo "</table>";
 }
     
+
 afficherTableHTML($Noms);
+
