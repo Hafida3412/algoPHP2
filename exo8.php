@@ -17,5 +17,5 @@ function repeterImage($url, $nbRepetitions) {
     }
 }
 
-repeterImage('http://my.mobirise.com/data/userpic/764.jpg', 4);
+repeterImage('http://my.mobirise.com/data/userpic/764.jpg', 0);
     
