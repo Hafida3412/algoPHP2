@@ -28,6 +28,8 @@ $Noms= [
 ksort($Noms);
 
 function afficherTableHTML($Noms) {
+    
+    $url = "https://fr.wikipedia.org/wiki/";
     echo '<br>';
     echo "<table> 
     <thead>
@@ -38,12 +40,15 @@ function afficherTableHTML($Noms) {
     </tr>
 </thead>";
 
+/*$url = "https://fr.wikipedia.org/wiki/";
+   echo "<a href=$url'target='_blank">"Lien</a>;*/
+
 foreach($Noms as $Pays => $capitales){
     echo "
 <tr>
 <td>".mb_strtoupper($Pays)."</td>
 <td>".ucfirst($capitales)."<td>
-<td>"."https://fr.wikipedia.org/wiki/"."</td>
+<td><a href='".$url.ucfirst($capitales)."' target='_blank'>Lien</a></td>
 </tr>";
 }
 

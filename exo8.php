@@ -9,7 +9,7 @@
 
 <?php
 $Url = "http://my.mobirise.com/data/userpic/764.jpg";
-echo repeterImage($Url, 0);
+echo repeterImage($Url, 4);
 
 function repeterImage($url, $nbRepetitions) {
     for ($i = 0; $i < $nbRepetitions; $i++) {
