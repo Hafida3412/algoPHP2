@@ -14,10 +14,11 @@ $nomsRadio = [
     "Féminin" => "",
     "Autre" => "checked"
 ];
+afficherRadio($nomsRadio);
 Function afficherRadio($nomsRadio){
     echo "<form>";
     foreach($nomsRadio as $nom => $value){
-       echo "<input type='radio' name='".$nom."' value='$nom'"." $value"."/>";
+       echo "<input type='radio' name='". $nom. "' value='".$nom."' ". $value."/>",
        '<label for="'.$nom.'">'.$nom.'</label>';
     }
     echo "</form>";

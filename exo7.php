@@ -19,7 +19,7 @@ $elements = [
 function genererCheckbox($elements){
     echo "<form>";
     foreach ($elements as $choix=> $value){
-        echo  "<input type ='checkbox' name='".$choix."' value='".$choix."'  ". $value.">",
+        echo  "<input type ='checkbox' name='".$choix."' value='".$choix."' ". $value.">",
         '<label for="'.$choix.'">'.$choix.'</label>';
         
         
