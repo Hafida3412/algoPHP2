@@ -5,10 +5,13 @@
 
     Exemple:
     formaterDateFr("2018-02-23");
+<br>
 
 <?php
-"<br>";  
-formaterDateFr('2018-02-23');
-function formaterDateFr($date){
 
-}
+"<br>";
+
+$fmt = new IntlDateFormatter('fr_FR', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+
+echo $fmt->format(new DateTime('2018-02-23'));
+
