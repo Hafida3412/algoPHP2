@@ -13,12 +13,15 @@
 "<br>";
 $tableauValeur=[
     "bool"=>"true",
-    "string"=>"texte",
-    "int"=>10,
-    [array("valeur 1","valeur2")]
+    "string(5)"=> "texte",
+    "int" => 10,
+    "float"=>(25.369),
+    "array2" => ["valeur 1","valeur2"]
 
 ];
+
 foreach($tableauValeur as $key => $Value){
-    /*echo" ".$key."<br>". $Value.";*/
+    /*echo" '.$key. $Value.'";*/
     var_dump($tableauValeur);
 }
+
