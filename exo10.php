@@ -7,7 +7,7 @@
         "Développeur Logiciel", "Designer web", "Intégrateur" ou "Chef de projet"
     Le formulaire devra également comporter un bouton permettant de le soumettre à 
     un traitement de validation (submit).
-
+ 
 
     <?php
 
@@ -39,10 +39,21 @@ Function afficherRadio($nomsRadio){
        '<label for="'.$nom.'">'.$nom.'</label>';
         
     }
+  
     echo"</form>";
-    }   
+
+    };
+
+   /*"<input type ='submit' value= 'Valider'>;*/
+
+    echo '<input type ="Submit" value="Valider"/>';
+   
+
     
-    /*"<input type ='submit' value= 'Valider'>;*/
+
+  
+    
+    
     
       
     
