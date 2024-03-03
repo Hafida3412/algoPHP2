@@ -79,21 +79,25 @@ public function __construct (string $marque, string $modèle, string $nbPortes){
     }
 
     public function demarrer(){
-    echo "Le véhicule" .$this->marque. $this->modèle. "démarre.";
+    return $this->marque. $this->modèle. $this->vitesseActuelle;
     }
 
     public function accelerer($vitesse){
-    echo "Le véhicule" .$this->marque. $this->modèle. "accélère de ".$vitesse. "km/h.";
-    $this->vitesseActuelle += $vitesse;
+    return $this->marque. $this->modèle. "accélère de ".($this->vitesseActuelle > 0). "km/h.";
     }
     
     public function stopper(){
-    echo "Le véhicule" .$this->marque. $this->modèle."est stoppé";
-    $this->vitesseActuelle = 0;
+    return $this->marque. $this->modèle. ($this->vitesseActuelle = 0). "est stoppé";
     }
 
     public function ralentir($vitesse){
-    echo "Le véhicule" .$this->marque. $this->modèle."ralentit de ".$vitesse. "km/h";
-    $this->vitesseActuelle <= $vitesse;
+    return $this->marque. $this->modèle."ralentit de ". ($this->vitesseActuelle < 0)."km/h";
     } 
+    public function afficherInfos() {
+        $result = "<h1>Infos véhicule v1</h1>";       
+}
+
+    public function __toString(){
+
+    }
 }
